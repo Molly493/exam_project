@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApiExamen.Models;
+using WebApiExamen.Services;
 
 namespace WebApiExamen.Controllers
 {
@@ -6,28 +8,15 @@ namespace WebApiExamen.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private readonly IWeatherService _weatherService;
+        public WeatherForecastController(IWeatherService weatherService)
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
+            _weatherService = weatherService;
         }
-
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return _weatherService.GetForecasts();
         }
     }
 }

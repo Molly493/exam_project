@@ -1,4 +1,4 @@
-namespace WebApiExamen
+namespace WebApiExamen.Models
 {
     public class WeatherForecast
     {
