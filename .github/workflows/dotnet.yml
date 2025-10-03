@@ -12,16 +12,24 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        dotnet-version: ['8.0.x']
+        dotnet-version: ['8.0.0']
     steps:
       - uses: actions/checkout@v4
+      
       - name: Setup .NET ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
+      
+      - name: Path NET
+        id: project-path
+        run: echo "project-path=WebApiExamen/WebApiExamen.csproj" >> $GITHUB_OUTPUT  
+      
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ${{ steps.project-path.outputs.project-path }}  
+      
       - name: Build
-        run: dotnet build --no-restore -c Release
+        run: dotnet build ${{ steps.project-path.outputs.project-path }} --no-restore -c Release 
+      
       - name: Run Tests in Production Environment
-        run: dotnet test --no-build --verbosity normal --environment Production
+        run: dotnet test ${{ steps.project-path.outputs.project-path }} --no-build --verbosity normal --environment Production
