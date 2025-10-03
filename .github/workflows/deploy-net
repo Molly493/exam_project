@@ -1,0 +1,48 @@
+name: Deploy and Release
+
+on:
+  workflow_dispatch:  
+  push:
+    tags: [ 'v*' ]  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup .NET 8.0.1
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      
+      - name: Restaurar dependencias
+        run: dotnet restore WebApiExamen/WebApiExamen.csproj
+      
+      - name: Build y Publicar
+        run: dotnet publish WebApiExamen/WebApiExamen.csproj -c Release -o ./publish --no-build
+      
+      - name: Comprimir publicacion de salida
+        run: zip -r api-net-publish.zip ./publish
+      
+      - name: Crear Release
+        id: crear_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: '.NET 8 API Examen - Versión ${{ github.ref }}'
+          draft: false
+          prerelease: false
+      
+      - name: Upload la publicacion activa
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.crear_release.outputs.upload_url }}
+          asset_path: ./api-net-publish.zip
+          asset_name: api-net-publish.zip  
+          asset_content_type: application/zip
