@@ -1,16 +1,33 @@
 {
   "version": 2,
-  "dgSpecHash": "t/He9xZZWiU=",
+  "dgSpecHash": "M4nRMlLW8lg=",
   "success": true,
   "projectFilePath": "C:\\04_wrks_prueba\\exa_proy\\git_proy\\WebApiExamen\\WebApiExamen.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.testing.extensions.trxreport.abstractions\\1.8.4\\microsoft.testing.extensions.trxreport.abstractions.1.8.4.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.testing.platform\\1.8.4\\microsoft.testing.platform.1.8.4.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.testing.platform.msbuild\\1.8.4\\microsoft.testing.platform.msbuild.1.8.4.nupkg.sha512",
     "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
     "C:\\Users\\patricia.murillo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\patricia.murillo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\patricia.murillo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
-    "C:\\Users\\patricia.murillo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\xunit.v3.assert\\3.1.0\\xunit.v3.assert.3.1.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\xunit.v3.common\\3.1.0\\xunit.v3.common.3.1.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\xunit.v3.core\\3.1.0\\xunit.v3.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\xunit.v3.extensibility.core\\3.1.0\\xunit.v3.extensibility.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\xunit.v3.runner.common\\3.1.0\\xunit.v3.runner.common.3.1.0.nupkg.sha512",
+    "C:\\Users\\patricia.murillo\\.nuget\\packages\\xunit.v3.runner.inproc.console\\3.1.0\\xunit.v3.runner.inproc.console.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }
