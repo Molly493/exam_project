@@ -20,7 +20,7 @@ jobs:
         run: dotnet restore WebApiExamen/WebApiExamen.csproj
       
       - name: Build y Publicar
-        run: dotnet publish WebApiExamen/WebApiExamen.csproj -c Release -o ./publish --no-build
+        run: dotnet publish WebApiExamen/WebApiExamen.csproj -c Release -o ./publish
       
       - name: Comprimir publicacion de salida
         run: zip -r api-net-publish.zip ./publish
